@@ -1,0 +1,64 @@
+
+# html lang
+language: en  # zh-CN 语言
+
+layout:
+
+# main menu navigation 可以通过修改这个来修改导航栏
+menu:
+  首页: /        # 导航栏首选项
+  关于: /about   # 导航栏第二选项
+  分享: /sharing # 导航栏第三选项
+  项目: /projects # 导航栏第四选项
+  归档: /archives # 导航栏第五选项
+
+head:
+  title: 我的博客  # 背景标题  
+  favicon: /images/logo_garcia.jpg  # 网站图标地址，放在主题目录下source的images文件夹中
+  keywords: garcia                  # 网站关键词             
+  backgroundImg: /images/bg-1.jpg   # 网站背景图片地址，放在主题目录下source的images文件夹中
+
+# stylesheets loaded in the <head>
+stylesheets: #  网站样式
+  - /css/garcia.css
+  - /css/home-bg.css
+  - /css/menu.css
+  - /css/recent-posts.css
+  - /css/bottom.css
+  - /css/category.css
+  - /css/archive.css
+  - /css/about.css
+  - /css/post.css
+  - /css/sharing.css
+  - /css/projects.css
+
+# scripts loaded in the end of the body
+scripts: # 网站脚本（基本是js动画）
+  - /js/garcia.js
+  - /js/header.js
+  - /js/post_item.js
+
+
+#个人信息卡片配置
+userinfo:
+  name: Garcia #姓名
+  description: I LOVE THIS THEME. #个人描述
+  avator: /images/logo_garcia.jpg #形象图片
+  github: https://github.com/Melifen #github链接
+  email: mailto:melifen2002@163.com #mailto:your_email
+
+#分享链接配置
+sharing:
+  sharing_1:
+    url: https://wangdoc.com/
+    title: 网道-互联网开发文档
+    cover: https://melibees-images.oss-cn-hangzhou.aliyuncs.com/images/20230905150914.png
+    position: left
+
+# 我的项目配置
+projects:
+  project_1:
+    url: https://github.com/Melifen/smart-campus
+    title: smart-campus(智慧校园)
+    cover: https://melibees-images.oss-cn-hangzhou.aliyuncs.com/images/loginPage.png
+    position: center

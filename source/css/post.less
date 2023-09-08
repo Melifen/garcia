@@ -1,0 +1,87 @@
+.post {
+    margin-top: 10vh;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    width: 80vw;
+    color: white;
+    border-radius: 20px;
+    background-color: rgba(73, 72, 72, 0.689);
+
+    .post-head {
+        margin-top: 2em;
+        width: 80%;
+        height: 400px;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        h1 {
+            font-size: 32px;
+            text-shadow: black 0.1rem 0.1rem 0.2rem;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+    }
+
+
+    .post-content {
+        margin-top: 2em;
+        width: 100%;
+        height: 100%;
+        font-style: normal;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        overflow:auto;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        * {
+            margin-top: calc(1em);
+        }
+
+        h2 {
+            font-size: 24px;
+            color: rgb(67, 228, 243);
+            margin-top: calc(2em);
+        }
+
+        h3 {
+            color: rgb(67, 187, 243);
+            font-weight: bold;
+        }
+
+        blockquote {
+            border-left-color: rgb(160, 235, 61);
+            border-left-style: solid;
+            border-left-width: .2rem;
+
+            *{
+                margin-left: 1em;
+            }
+
+            p {
+                
+                color: chartreuse;
+
+                strong {
+                    color: rgb(2, 248, 68);
+                    font-style: italic;
+                }
+            }
+        }
+
+
+
+    }
+}

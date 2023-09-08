@@ -1,0 +1,10 @@
+<div id="projects" class="projects">
+    <h2 id="projects-title" class="projects-title">
+        <%=page.title%>
+    </h2>
+    <div id="projects-container" class="projects-container">
+        <% Object.values(theme.projects).forEach( item => { %>
+            <%- partial('partials/card.ejs', {item: item}) %>
+        <% }); %>
+    </div>
+</div>

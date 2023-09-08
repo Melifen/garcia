@@ -1,0 +1,20 @@
+<% if (page.posts.length> 0) { %>
+  <div id="recent-posts" class="recent_posts">
+    <h1 id="recent_posts-h1" class="recent_posts-h1">最近发布</h1>
+
+    <div id="recent-posts-items" class="recent_posts-items">
+      <% page.posts.sort('date', -1).limit(10).each(post => { %>
+        <!-- style="background-image:url(post.thumbnail); background-position: center; background-repeat: no-repeat;" -->
+        <div id="recent-post-item" class="recent_post-item"  >
+          <img src="<%=post.thumbnail%>" alt="<%=post.title%>" class="recent_post-item-img">
+          <a href="<%=url_for(post.path)%>" class="recent_post_id-a">
+            <%=post.title%>
+          </a>
+          <time datetime="<%=post.date.toJSON()%>" class="recent_post_id-time">
+            <%=date(post.date)%>
+          </time>
+        </div>
+        <% }); %>
+    </div>
+  </div>
+  <% } %>

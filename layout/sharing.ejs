@@ -1,0 +1,10 @@
+<div id="sharing" class="sharing">
+    <h2 id="sharing-title" class="sharing-title">
+        好文<%=page.title%>
+    </h2>
+    <div id="sharing-container" class="sharing-container">
+        <% Object.values(theme.sharing).forEach( item => { %>
+            <%- partial('partials/card.ejs', {item: item}) %>
+        <% }); %>
+    </div>
+</div>

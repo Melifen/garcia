@@ -1,0 +1,70 @@
+<% var pageTitle=page.title || config.subtitle || '' ; if (is_archive()) pageTitle='Archives' ; if (is_tag())
+    pageTitle='Tag: ' + page.tag; if (is_category()) pageTitle='Category: ' + page.category; if (is_month()) pageTitle
+    +=': ' + page.month + '/' + page.year; if (is_year()) pageTitle +=': ' + page.year; pageTitle +=' [ ' + config.title
+    + ' ]' ; %>
+
+    <!DOCTYPE html>
+    <html lang="<%=config.language%>">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            <%=config.title%>
+        </title>
+        <link rel="bookmark" type="image/x-icon" href="<%- theme.head.favicon %>" />
+        <link rel="shortcut icon"  href="<%- theme.head.favicon %>">
+        <% if (theme.stylesheets !==undefined && theme.stylesheets.length> 0) { %>
+            <!-- stylesheets list from _config.yml -->
+            <% theme.stylesheets.forEach(url=> { %>
+                <link rel="stylesheet"  href="<%=url%>">
+                <% }); %>
+                    <% } %>
+    </head>
+
+    <body>
+
+            <div style="background-image:url(<%-theme.head.backgroundImg%>);" class="background-show">
+
+            </div>
+            <% if(page.path === 'index.html'){ %>
+                <% console.log(page.path) %>
+                <%- partial('partials/home-bg.ejs') %>
+            <% } %>
+            
+            <%- partial('partials/home-header.ejs') %>
+            
+
+            <div id="menu-outer" class="menu-outer">
+                <div id="menu-inner" class="menu-inner">
+                    <% Object.keys(theme.menu).forEach(key=> { %>
+                        <a class="menu-inner-a" href="<%=theme.menu[key]%>">
+                            <%=key%>
+                        </a>
+                        <% }); %>
+                </div>
+            </div>
+
+            <div id="content-outer">
+                <div id="content-inner">
+                    <%- body %>
+                </div>
+            </div>
+
+            <div id="bottom-outer" class="bottom-outer">
+                <div id="bottom-inner" class="bottom-inner">
+                        <a href="http://hexo.io" class="bottom-inner-a-hexo">POWERED BY HEXO</a>
+                        <br/>   
+                        <a href="<%=config.root%>" class="bottom-inner-a-theme">DESIGN BY <%=config.author%> </a>
+                </div>
+            </div>
+
+            <% if (theme.scripts !==undefined && theme.scripts.length> 0) { %>
+                <!-- scripts list from theme config.yml -->
+                <% theme.scripts.forEach(url=> { %>
+                    <script src="<%=url%>"></script>
+                    <% }); %>
+                        <% } %>
+
+    </body>
+
+    </html>
