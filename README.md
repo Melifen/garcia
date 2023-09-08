@@ -164,8 +164,7 @@ projects:
 - [ ] 支持 mermaid 流程图
 
 ## 贡献者
-
-<div style="height:100px;width:100px;overflow:hidden;border-radius:100px;"><img style="height:100%;width:100%; zoom: 25%;object:contain" src="https://melibees-images.oss-cn-hangzhou.aliyuncs.com/images/me.jpg"></div>
+![me](https://melibees-images.oss-cn-hangzhou.aliyuncs.com/images/me.jpg)
 
 ## 联系方式
 
